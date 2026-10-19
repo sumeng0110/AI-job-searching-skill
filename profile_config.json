@@ -1,0 +1,147 @@
+{
+  "tracks": {
+    "finance_ai_fde": {
+      "label": "财务 AI / FDE",
+      "max_score": 45,
+      "groups": {
+        "finance_domain": {
+          "weight": 3,
+          "max": 15,
+          "terms": [
+            "财务", "FP&A", "经营分析", "预算", "对账", "关账", "报销", "费控",
+            "应付", "应收", "付款", "发票", "合并报表", "ERP", "EPM", "HFM",
+            "finance", "accounting", "budget", "forecast", "reconciliation",
+            "monthly close", "invoice", "expense", "AP", "AR", "FP&A"
+          ]
+        },
+        "ai_workflow": {
+          "weight": 4,
+          "max": 16,
+          "terms": [
+            "AI", "大模型", "LLM", "Agent", "RAG", "知识库", "Prompt", "提示词",
+            "工作流", "自动化", "RPA", "Human-in-the-Loop", "人工复核",
+            "automation", "workflow", "agent", "LLM", "RAG", "knowledge base",
+            "prompt", "human review", "HITL"
+          ]
+        },
+        "trust_controls": {
+          "weight": 3,
+          "max": 14,
+          "terms": [
+            "权限", "审计", "留痕", "准确率", "评测", "校验", "数据质量",
+            "异常", "兜底", "可审计", "可追溯", "风险",
+            "permission", "audit", "audit trail", "accuracy", "evaluation",
+            "validation", "data quality", "exception", "control", "risk"
+          ]
+        }
+      }
+    },
+    "ai_product": {
+      "label": "AI 产品",
+      "max_score": 28,
+      "groups": {
+        "product": {
+          "weight": 3,
+          "max": 12,
+          "terms": [
+            "产品经理", "AI产品", "需求", "PRD", "路线图", "MVP", "用户",
+            "产品设计", "指标", "增长", "体验",
+            "product manager", "product", "requirement", "roadmap", "user",
+            "metric", "MVP", "prototype", "rollout"
+          ]
+        },
+        "llm_platform": {
+          "weight": 3,
+          "max": 10,
+          "terms": [
+            "多模型", "模型路由", "API", "Function Calling", "MCP", "工具调用",
+            "模型网关", "OpenAI", "Claude", "Gemini",
+            "multi-model", "model routing", "tool calling", "gateway"
+          ]
+        },
+        "evaluation": {
+          "weight": 2,
+          "max": 6,
+          "terms": ["效果评估", "评测", "A/B", "采纳率", "准确率", "成本", "延迟",
+            "evaluation", "adoption", "accuracy", "cost", "latency", "success metric"]
+        }
+      }
+    },
+    "data_bi": {
+      "label": "数据 / BI",
+      "max_score": 22,
+      "groups": {
+        "data_stack": {
+          "weight": 3,
+          "max": 12,
+          "terms": [
+            "SQL", "Python", "pandas", "Power BI", "Tableau", "Quick BI", "数据仓库",
+            "数仓", "ETL", "数据建模", "指标体系", "DAX", "dbt",
+            "data warehouse", "data model", "data modeling"
+          ]
+        },
+        "analytics": {
+          "weight": 2,
+          "max": 10,
+          "terms": [
+            "数据分析", "经营分析", "商业分析", "BI", "报表", "dashboard",
+            "可视化", "预测", "预算分析",
+            "analytics", "reporting", "visualization", "forecasting"
+          ]
+        }
+      }
+    }
+  },
+  "bonuses": [
+    {
+      "name": "跨部门协作",
+      "weight": 2,
+      "max": 6,
+      "terms": ["跨部门", "业务团队", "IT", "工程团队", "算法团队", "协作", "推动"]
+    },
+    {
+      "name": "内部部署与系统集成",
+      "weight": 3,
+      "max": 9,
+      "terms": ["私有化", "内部部署", "接口", "联调", "SSO", "Docker", "权限体系", "系统集成",
+        "API", "integration", "system integration", "ERP integration"]
+    },
+    {
+      "name": "英语/全球化",
+      "weight": 2,
+      "max": 4,
+      "terms": ["英语", "全球", "海外", "跨区域", "APAC", "英文", "English", "global", "remote"]
+    }
+  ],
+  "risks": [
+    {
+      "name": "强工程硬门槛",
+      "penalty": 4,
+      "max_penalty": 12,
+      "terms": ["Kubernetes", "k8s", "微服务", "高并发", "Java", "Go", "C++", "分布式系统"]
+    },
+    {
+      "name": "纯销售/BD倾向",
+      "penalty": 5,
+      "max_penalty": 10,
+      "terms": ["销售额", "BD", "客户拓展", "陌拜", "销售线索", "业绩指标", "sales quota", "cold call"]
+    },
+    {
+      "name": "年限偏高",
+      "penalty": 5,
+      "max_penalty": 10,
+      "terms": ["8年以上", "10年以上", "团队管理", "总监", "8+ years", "10+ years", "director"]
+    },
+    {
+      "name": "当地授权/地区限制",
+      "penalty": 5,
+      "max_penalty": 10,
+      "terms": ["Remote - US", "must be based", "work authorization", "visa sponsorship: no", "US only"]
+    }
+  ],
+  "resume_focus": {
+    "finance_ai_fde": "我在自己的 FP&A 月报流程中搭建过财务 Agent 框架，包含输入契约、Skill/MCP 工具调用、模板驱动报表/PPT生成、输出测试、HFM 交叉校验、冷却机制和 Human-in-the-Loop，重点解决财务 AI 结果可用、可信、可审计的问题。",
+    "ai_product": "我独立做过多角色 AI 互动应用和私有 LLM Gateway，覆盖多模型接入、MCP/Skill 工具目录、模型路由、成本分层、Prompt 调优、降级设计和自动化测试，能把 AI 能力落成真实可交互产品。",
+    "data_bi": "我做过 Cursor + Power BI Agent 化报表工作流，覆盖 PostgreSQL 查数、PG MCP、dbt 分层、Power BI 语义模型、DAX 度量值、报表设计和发布前校验；同时有 4 年经营分析和百万行数据处理经验。"
+  }
+}
